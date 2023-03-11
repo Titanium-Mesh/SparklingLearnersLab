@@ -1,0 +1,83 @@
+
+
+<html>
+    <head>
+        <title>Blog on Writing a C++ Program</title>
+        <style>
+            .blog-post {
+		        border: 5px solid #fff;
+		        background-color: #87CEFA;
+		    }
+	  
+		    body {
+                background-color: #87CEFA;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 1em;
+	    	}
+            
+            h1 {
+                font-size: 2em;
+                font-weight: bold;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            pre {
+			background-color: #eee;
+			padding: 1em;
+			border-radius: 5px;
+		}
+        </style>
+    </head>
+    <body>
+        <h1>C++ program to implement a class named Time</h1>
+        <p>
+            In this blog post, I will be explaining how to write a C++ program to implement a class named Time. This class should have a constructor to initialize the time, hours, minutes and seconds. The class should also have another function named ToSecond() to convert and display the time into seconds. 
+        </p>
+        <p>
+            The following code snippet will show how to write a C++ program to accomplish this task. 
+        </p>
+        <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Time
+{
+    private:
+        int hours;
+        int minutes;
+        int seconds;
+    public:
+        // Constructor to initialize the time
+        Time(int h, int m, int s)
+        {
+            this-&gt;hours = h;
+            this-&gt;minutes = m;
+            this-&gt;seconds = s;
+        }
+
+        // Function to convert and display the time into seconds
+        void ToSecond()
+        {
+            int timeInSeconds = (hours*3600) + (minutes*60) + seconds;
+            cout &lt;&lt; "Time in seconds is: " &lt;&lt; timeInSeconds &lt;&lt; endl;
+        }
+};
+
+int main()
+{
+    Time t(2, 30, 15);
+    t.ToSecond();
+    return 0;
+}
+        </pre>
+        <p>
+            In this program, a class named Time is created which has three private variables to store the hours, minutes and seconds of the time. The constructor is used to initialize the time. The function ToSecond() is used to convert the time into seconds and display it. 
+        </p>
+        <p>
+            In the main() method, an object of the class Time is created and the values for hours, minutes and seconds are passed. The function ToSecond() is called to convert and display the time into seconds. 
+        </p>
+    </body>
+</html>

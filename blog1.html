@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C++ Program to Calculate the Area of a Circle</title>
+	<style>
+		.blog-post {
+		  border: 5px solid #fff;
+		  background-color: #87CEFA;
+		}
+	  
+		body {
+			background-color: #87CEFA;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			padding: 1em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.2;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.5em;
+		}
+		h3 {
+			font-size: 1.2em;
+		}
+		pre {
+			background-color: #eee;
+			padding: 1em;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>C++ Program to Calculate the Area of a Circle</h1>
+	<p>In this tutorial, we will learn how to write a C++ program to calculate the area of a circle using a class named Circle which has two functions with the names: GetRadius and CalArea.</p>
+	<h2>Explanation</h2>
+	<p>Firstly, we need to include the necessary libraries:</p>
+	<pre>
+#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+	</pre>
+	<p>Next, we create a class named 'Circle' which contains the two functions GetRadius() and CalArea():</p>
+	<pre>
+class Circle
+{
+  private:
+    float radius;
+  public:
+    //Function to get the value of radius from user 
+    void GetRadius()
+    {
+        cout&lt;&lt;"Enter the radius of the circle: ";
+        cin&gt;&gt;radius;
+       
+    }
+    //Function to calculate the area of circle
+    void CalArea()
+    {
+        float area = 3.14*radius*radius;
+        //Display the area of the circle
+        cout&lt;&lt;"The area of the circle is: "&lt;&lt;area&lt;&lt;endl;
+        
+    }
+};
+	</pre>
+	<p>Finally, we define the main function where we create an object of the class 'Circle' and call the two functions GetRadius() and CalArea():</p>
+	<pre>
+void main()
+{
+    Circle c;
+    c.GetRadius();
+    c.CalArea();
+    getch();
+}
+	</pre>
+	<p>This program will ask the user to enter the radius of the circle and then calculate the area of the circle and display the result.</p>
+</body>
+</html>
